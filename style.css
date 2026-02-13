@@ -6,7 +6,9 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    line-height: 1.5;
     animation: fadeIn 1.5s ease-in;
+    text-align: center;
 }
 
 a {
@@ -14,12 +16,13 @@ a {
     color: #ff4f81;
 }
 
+/* Headings */
 h1, h2, h3 {
     color: #ff2a6d;
-    text-align: center;
+    margin: 20px 0;
 }
 
-/* Fade in effect */
+/* Fade in body */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -51,18 +54,38 @@ nav a:hover {
 }
 
 /* ---------------------------------------- */
-/* MEMORY PAGE STYLING */
+/* BUTTONS */
+button {
+    background: #ff4f81;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+button:hover {
+    background: #ff2a6d;
+    transform: scale(1.05);
+}
+
+/* ---------------------------------------- */
+/* MEMORY PAGE LAYOUT */
 .memory-layout {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
-    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 40px auto;
 }
 
 .memory-item img {
     width: 220px;
+    max-width: 90%;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     transition: 0.3s;
@@ -72,14 +95,15 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Heart container */
+/* ---------------------------------------- */
+/* HEART CONTAINER */
 .heart-container {
     position: relative;
     width: 250px;
     height: 220px;
     background: #ff4f81;
     transform: rotate(-45deg);
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 .heart-container::before,
@@ -108,9 +132,10 @@ nav a:hover {
     word-wrap: break-word;
 }
 
-/* Couple photo */
+/* ---------------------------------------- */
+/* COUPLE PHOTO */
 .couple-photo {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .couple-photo img {
@@ -123,16 +148,15 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* Caption under couple photo */
+/* Caption below couple photo */
 .caption {
-    margin-top: 15px;
     font-size: 16px;
     color: #ff2a6d;
-    text-align: center;
+    margin-top: 10px;
 }
 
 /* ---------------------------------------- */
-/* FLOATING ELEMENTS (hearts, butterflies, roses, emojis) */
+/* FLOATING ELEMENTS */
 .floating-elements::before,
 .floating-elements::after {
     position: fixed;
@@ -160,31 +184,13 @@ nav a:hover {
 }
 
 /* ---------------------------------------- */
-/* BUTTONS */
-button {
-    background: #ff4f81;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #ff2a6d;
-    transform: scale(1.05);
-}
-
-/* ---------------------------------------- */
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
     .memory-layout {
         flex-direction: column;
     }
 
-    .heart-container, .couple-photo img {
+    .heart-container, .couple-photo img, .memory-item img {
         width: 80%;
         height: auto;
     }
@@ -192,5 +198,18 @@ button:hover {
     .floating-elements::before, .floating-elements::after {
         font-size: 18px;
     }
+
+    button {
+        width: 70%;
+        font-size: 14px;
+    }
 }
+
+/* ---------------------------------------- */
+/* ADDITIONAL CLEAN ALIGNMENT FOR ALL TEXT */
+p, h1, h2, h3, li {
+    margin: 10px auto;
+    text-align: center;
+}
+
 
