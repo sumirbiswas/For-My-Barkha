@@ -168,9 +168,15 @@ h1 {
 }
 
 .couple-photo img {
-    width: 300px;
+    .couple-photo img {
+    width: 300px;       /* max width */
+    max-width: 90%;     /* responsive for smaller screens */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: block;
+    margin: 0 auto;     /* centers image */
+    height: auto;       /* keeps aspect ratio */
+}
 }
 
 .caption {
