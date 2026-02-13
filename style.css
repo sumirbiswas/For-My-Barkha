@@ -182,3 +182,40 @@ h1 {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
+.floating-elements::before,
+.floating-elements::after {
+    position: fixed;
+    font-size: 22px;
+    pointer-events: none;
+    animation: floatUp 12s linear infinite;
+}
+
+/* Hearts */
+.floating-elements::before {
+    content: "❤️";
+    left: 20%;
+    animation-delay: 0s;
+}
+
+/* Butterflies + Flowers */
+.floating-elements::after {
+    content: "🦋 🌸";
+    left: 70%;
+    animation-delay: 5s;
+}
+
+@keyframes floatUp {
+    0% {
+        bottom: -10%;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
