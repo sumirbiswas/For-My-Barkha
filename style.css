@@ -1,5 +1,4 @@
-/* ---------------------------------------- */
-/* GENERAL STYLING */
+/* ================= GENERAL ================= */
 body {
     font-family: 'Arial', sans-serif;
     background: #fff0f5;
@@ -7,7 +6,17 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.5;
+    text-align: center;
     animation: fadeIn 1.5s ease-in;
+}
+
+h1, h2, h3 {
+    color: #ff2a6d;
+    margin: 20px 0;
+}
+
+p, li {
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -16,20 +25,12 @@ a {
     color: #ff4f81;
 }
 
-/* Headings */
-h1, h2, h3 {
-    color: #ff2a6d;
-    margin: 20px 0;
-}
-
-/* Fade in body */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* ---------------------------------------- */
-/* NAVIGATION BAR */
+/* ================= NAVBAR ================= */
 nav {
     width: 100%;
     background: #ff4f81;
@@ -53,8 +54,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* ---------------------------------------- */
-/* BUTTONS */
+/* ================= BUTTONS ================= */
 button {
     background: #ff4f81;
     color: white;
@@ -72,8 +72,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ---------------------------------------- */
-/* MEMORY PAGE LAYOUT */
+/* ================= MEMORY LAYOUT ================= */
 .memory-layout {
     display: flex;
     flex-wrap: wrap;
@@ -95,8 +94,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ---------------------------------------- */
-/* HEART CONTAINER */
+/* ================= HEART CONTAINER ================= */
 .heart-container {
     position: relative;
     width: 250px;
@@ -132,8 +130,7 @@ button:hover {
     word-wrap: break-word;
 }
 
-/* ---------------------------------------- */
-/* COUPLE PHOTO */
+/* ================= COUPLE PHOTO ================= */
 .couple-photo {
     margin-top: 40px;
 }
@@ -148,15 +145,13 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Caption below couple photo */
 .caption {
     font-size: 16px;
     color: #ff2a6d;
     margin-top: 10px;
 }
 
-/* ---------------------------------------- */
-/* FLOATING ELEMENTS */
+/* ================= FLOATING ELEMENTS ================= */
 .floating-elements::before,
 .floating-elements::after {
     position: fixed;
@@ -183,8 +178,7 @@ button:hover {
     100% { bottom: 110%; opacity: 0; transform: translateX(-30px); }
 }
 
-/* ---------------------------------------- */
-/* RESPONSIVE DESIGN */
+/* ================= RESPONSIVE ================= */
 @media screen and (max-width: 768px) {
     .memory-layout {
         flex-direction: column;
@@ -205,11 +199,5 @@ button:hover {
     }
 }
 
-/* ---------------------------------------- */
-/* ADDITIONAL CLEAN ALIGNMENT FOR ALL TEXT */
-p, h1, h2, h3, li {
-    margin: 10px auto;
-    text-align: center;
-}
 
 
